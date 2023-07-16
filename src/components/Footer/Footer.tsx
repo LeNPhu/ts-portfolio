@@ -1,7 +1,7 @@
 import { MailOutlined, PhoneOutlined, RocketOutlined } from "@ant-design/icons";
 import "./Footer.scss";
 import React from "react";
-import { BackTop } from "antd";
+import { BackTop, Typography } from "antd";
 import Paragraph from "antd/es/typography/Paragraph";
 
 const Footer: React.FC = () => {
@@ -17,11 +17,12 @@ const Footer: React.FC = () => {
       <div>
         <p>My other contacts</p>
         <p>
-          <PhoneOutlined /> <Paragraph copyable>084 383 0295</Paragraph>
+          <PhoneOutlined />{" "}
+          <Typography.Text copyable>084 383 0295</Typography.Text>
         </p>
         <p>
           <MailOutlined />{" "}
-          <Paragraph copyable>lenamphu12345@gmail.com</Paragraph>
+          <Typography.Text copyable>lenamphu12345@gmail.com</Typography.Text>
         </p>
       </div>
       <div>
