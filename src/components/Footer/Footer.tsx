@@ -9,7 +9,8 @@ const Footer: React.FC = () => {
       <div>
         <p>Thank you for visiting</p>
         <p>
-          Visit the <a href="#">Repository</a>
+          Visit the{" "}
+          <a href="https://github.com/LeNPhu/ts-portfolio">Repository</a>
         </p>
       </div>
       <div>
