@@ -1,0 +1,105 @@
+@use "./variable" as *;
+@use "./breakpoint" as *;
+@use "./mixin" as *;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 62.5%;
+
+}
+
+body {
+    font-size: 1.5rem;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: auto;
+    font-family: 'Inter', sans-serif;
+    // letter-spacing: 0.1px;
+    font-weight: 500;
+    //font-size: 22px;
+    background-color: #ffffff;
+
+    @include tablet {
+        font-size: 1.2rem;
+    }
+
+    @include mobile {
+        font-size: 1rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #1677FF;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #0557ca;
+}
+
+input,
+button,
+select,
+option {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.session {
+    min-height: 100vh;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-prev:focus {
+    font-size: inherit;
+    left: 0;
+    z-index: 2;
+    color: #ffffff;
+    height: 300px;
+    width: 50px;
+    top: 0px;
+    display: flex !important;
+    @include flex(column, center, center);
+    inset-inline-end: 0px;
+    margin-top: 0px;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.215), #ffffff00);
+}
+
+.ant-carousel .slick-next,
+.ant-carousel .slick-next:hover,
+.ant-carousel .slick-next:focus {
+    font-size: inherit;
+    right: 0;
+    z-index: 2;
+    color: #ffffff;
+
+    height: 300px;
+    width: 50px;
+    top: 0px;
+    display: flex !important;
+    @include flex(column, center, center);
+    inset-inline-end: 0px;
+    margin-top: 0px;
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.215), #ffffff00);
+
+}

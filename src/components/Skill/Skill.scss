@@ -1,0 +1,29 @@
+@use "../../assets/scss/" as *;
+
+.skill-container {
+    @include flex(column, center, center);
+    padding: 5%;
+    gap: 7rem;
+    ;
+
+
+
+    .skill {
+        @include flex(column, center, center);
+
+        .skill-img {
+
+            height: 10rem;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: 0.7s;
+
+        }
+
+        .skill-img:hover {
+            filter: grayscale(0%);
+        }
+
+
+    }
+}

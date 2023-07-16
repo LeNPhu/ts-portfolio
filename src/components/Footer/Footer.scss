@@ -1,0 +1,62 @@
+@use "../../assets/scss/" as *;
+
+.footer-container {
+    @include flex(row, flex-start, flex-start);
+    padding: 30px 5%;
+    gap: 5%;
+    background-color: #F0F3F5;
+
+    div {
+        line-height: 2;
+    }
+
+    .last {
+        margin-left: auto;
+        @include flex(column, center, center);
+
+
+        .rocket-btn {
+            inset-inline-end: 0px;
+            ;
+            inset-block-end: 0;
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+
+            @include flex(column, center, center);
+            transition: 0.4s;
+
+            span {
+                font-size: 4rem;
+                transition: 0.6s;
+            }
+
+            .fly {
+                display: none;
+                transition: 0.6s;
+                font-size: 1rem;
+            }
+
+        }
+
+
+        .rocket-btn:hover {
+
+            background-color: #1677FF;
+
+            span {
+                color: white;
+                font-size: 5rem;
+            }
+
+            .fly {
+                display: block;
+
+                color: white
+            }
+
+        }
+
+    }
+}

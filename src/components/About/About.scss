@@ -1,0 +1,22 @@
+@use "../../assets/scss/" as *;
+
+.about-container {
+    @include flex(column, center, flex-start);
+    padding: 7%;
+    line-height: 1.4;
+
+    .ant-col {
+        font-size: 1.6rem;
+
+        .overview {
+            font-size: 1.6rem;
+
+        }
+
+        .exp {
+            @include flex(column, center, center);
+            gap: 3rem;
+        }
+    }
+
+}

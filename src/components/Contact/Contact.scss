@@ -1,0 +1,36 @@
+@use "../../assets/scss/" as *;
+
+.contact-container {
+    @include flex(column, center, center);
+    padding: 10% 5%;
+
+    h1 {
+        text-align: center
+    }
+
+    .email-form {
+        @include flex(column, center, flex-start);
+        gap: 0.5rem;
+        width: 400px;
+        max-width: 50vw;
+
+        label {
+            padding-top: 2rem;
+        }
+
+        .ant-input-borderless {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.475);
+            border-radius: 0px;
+        }
+
+        .ant-input-borderless:hover,
+        .ant-input-borderless:focus {
+            border-color: #1677FF;
+        }
+
+        .ant-btn {
+            align-self: center;
+            margin: 1.5rem;
+        }
+    }
+}
