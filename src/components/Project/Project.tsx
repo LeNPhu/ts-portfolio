@@ -1,11 +1,11 @@
-import { Carousel, Image, Tag, Typography } from "antd";
+import { Carousel, Image, Tag } from "antd";
 import "./Project.scss";
 import imiu from "../../assets/images/imiu.png";
 import sbd from "../../assets/images/safe-building.png";
 import msg from "../../assets/images/mashenger.png";
 import { useState } from "react";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import Link from "antd/es/typography/Link";
+
 import { AnimationOnScroll } from "react-animation-on-scroll";
 const project = [
   {

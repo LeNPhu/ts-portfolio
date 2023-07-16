@@ -1,8 +1,8 @@
-import { Button, Checkbox, Col, Form, Input, Row } from "antd";
+import { Button, Input } from "antd";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
-import Link from "antd/es/typography/Link";
+
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { SocialIcon } from "react-social-icons";
 const social = [
@@ -20,7 +20,7 @@ const social = [
   },
 ];
 const Contact: React.FC = () => {
-  const form = useRef(null);
+  const form = useRef<any>();
   const sendEmail = (values: any) => {
     values.preventDefault();
     console.log(form.current);

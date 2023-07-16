@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.scss";
 import { Parallax } from "react-parallax";
 import background from "../../assets/images/background.jpg";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+
 const Home: React.FC = () => {
   return (
     <Parallax
