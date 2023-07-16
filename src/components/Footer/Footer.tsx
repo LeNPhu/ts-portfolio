@@ -2,7 +2,6 @@ import { MailOutlined, PhoneOutlined, RocketOutlined } from "@ant-design/icons";
 import "./Footer.scss";
 import React from "react";
 import { BackTop, Typography } from "antd";
-import Paragraph from "antd/es/typography/Paragraph";
 
 const Footer: React.FC = () => {
   return (
