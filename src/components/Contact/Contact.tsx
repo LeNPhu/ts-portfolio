@@ -67,6 +67,7 @@ const Contact: React.FC = () => {
                 return (
                   <>
                     <SocialIcon
+                      key={i.url}
                       style={{ margin: "10px" }}
                       url={i.url}
                     ></SocialIcon>

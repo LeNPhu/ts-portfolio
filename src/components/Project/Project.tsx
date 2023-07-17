@@ -145,7 +145,11 @@ const Project: React.FC = () => {
           <p>{project[slide].desc}</p>
           <div>
             {project[slide].tags.map((t) => {
-              return <Tag color={t.color}>{t.name}</Tag>;
+              return (
+                <Tag key={t.name} color={t.color}>
+                  {t.name}
+                </Tag>
+              );
             })}
           </div>
         </div>

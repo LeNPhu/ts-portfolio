@@ -1,8 +1,9 @@
 import React from "react";
 import "./About.scss";
-import { Col, Divider, Row, Timeline } from "antd";
+import { Col, Divider, Row, Timeline, Typography } from "antd";
 import { CheckOutlined, SyncOutlined } from "@ant-design/icons";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import cv from "../../assets/pdf/Lê Nam Phú - Frontend Developer_CV.pdf";
 const items = [
   {
     dot: <SyncOutlined spin={true} />,
@@ -90,6 +91,10 @@ const About: React.FC = () => {
                 at the end of the day is to develop the best experience it's
                 user didn't know was there.
               </p>
+              <br />
+              <Typography.Link href={cv} style={{ fontSize: "1.6rem" }}>
+                Grab a copy of my CV!
+              </Typography.Link>
             </div>
           </AnimationOnScroll>
         </Col>
