@@ -34,10 +34,10 @@ const Contact: React.FC = () => {
       )
       .then(
         (result) => {
-          messageApi.success("Sent successfully");
+          result ? messageApi.success("Sent successfully") : null;
         },
         (error) => {
-          messageApi.warning("Failed to send");
+          error ? messageApi.warning("Failed to send") : null;
         }
       );
   };
