@@ -1,4 +1,4 @@
-import { Carousel, Image, Tag } from "antd";
+import { Carousel, Image, Tag, Tooltip } from "antd";
 import "./Project.scss";
 import imiu from "../../assets/images/imiu.png";
 import sbd from "../../assets/images/safe-building.png";
@@ -138,10 +138,12 @@ const Project: React.FC = () => {
       </div>
       <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
         <div className="project-name" key={project[slide].name}>
-          <h2>
-            {" "}
-            <a href={project[slide].url}>{project[slide].name}</a>
-          </h2>
+          <Tooltip title="Click here to visit the website!">
+            <h2>
+              {" "}
+              <a href={project[slide].url}>{project[slide].name}</a>
+            </h2>
+          </Tooltip>
           <p>{project[slide].desc}</p>
           <div>
             {project[slide].tags.map((t) => {
