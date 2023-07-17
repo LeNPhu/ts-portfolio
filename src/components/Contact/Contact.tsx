@@ -1,4 +1,4 @@
-import { Button, Input } from "antd";
+import { Button, Input, message } from "antd";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
@@ -20,6 +20,7 @@ const social = [
   },
 ];
 const Contact: React.FC = () => {
+  const [messageApi, contextHolder] = message.useMessage();
   const form = useRef<any>();
   const sendEmail = (values: any) => {
     values.preventDefault();
@@ -33,10 +34,10 @@ const Contact: React.FC = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          messageApi.success("Sent successfully");
         },
         (error) => {
-          console.log(error.text);
+          messageApi.warning("Failed to send");
         }
       );
   };
@@ -52,7 +53,8 @@ const Contact: React.FC = () => {
             <label>SUBJECT</label>
             <Input type="text" name="user-subject" bordered={false} />
             <label>MESSAGE</label>
-            <Input.TextArea name="message" bordered={false} />
+            <Input.TextArea name="user-message" bordered={false} />
+            {contextHolder}
             <Button value="Send" htmlType="submit" type="primary">
               Send Message
             </Button>

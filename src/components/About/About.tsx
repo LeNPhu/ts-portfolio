@@ -92,6 +92,11 @@ const About: React.FC = () => {
                 user didn't know was there.
               </p>
               <br />
+              <p>
+                I'm also highly proficient with English with an IELTS band of
+                8.0
+              </p>
+              <br />
               <Typography.Link href={cv} style={{ fontSize: "1.6rem" }}>
                 Grab a copy of my CV!
               </Typography.Link>
