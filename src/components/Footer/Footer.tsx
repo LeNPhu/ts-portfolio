@@ -7,26 +7,31 @@ const Footer: React.FC = () => {
   return (
     <div className="footer-container">
       <div>
-        <p>Thank you for hanging around</p>
-        <p>
+        <Typography.Text>Thank you for hanging around</Typography.Text>
+        <br />
+        <Typography.Text>
           Visit the{" "}
           <a href="https://github.com/LeNPhu/ts-portfolio">Repository</a>
-        </p>
+        </Typography.Text>
       </div>
       <div>
-        <p>My other contacts</p>
-        <p>
+        <Typography.Text>My other contacts</Typography.Text>
+
+        <br />
+        <Typography.Text>
           <PhoneOutlined />{" "}
           <Typography.Text copyable>084 383 0295</Typography.Text>
-        </p>
-        <p>
+        </Typography.Text>
+        <br />
+        <Typography.Text>
           <MailOutlined />{" "}
           <Typography.Text copyable>lenamphu12345@gmail.com</Typography.Text>
-        </p>
+        </Typography.Text>
       </div>
       <div>
-        <p>Designed and Built by Le Nam Phu</p>
-        <p>© Le Nam Phu 2023</p>
+        <Typography.Text>Designed and Built by Le Nam Phu</Typography.Text>
+        <br />
+        <Typography.Text>© Le Nam Phu 2023</Typography.Text>
       </div>
       <div className="last ">
         <BackTop className="rocket-btn ">

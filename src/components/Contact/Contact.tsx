@@ -1,4 +1,4 @@
-import { Button, Input, message } from "antd";
+import { Button, Input, Typography, message, theme } from "antd";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
@@ -19,7 +19,11 @@ const social = [
     name: "Le Nam Phu ",
   },
 ];
+
 const Contact: React.FC = () => {
+  const {
+    token: { colorText },
+  } = theme.useToken();
   const [messageApi, contextHolder] = message.useMessage();
   const form = useRef<any>();
   const sendEmail = (values: any) => {
@@ -46,25 +50,41 @@ const Contact: React.FC = () => {
     <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
       <div className="contact-container session" id="contact">
         <div>
-          <h1>Send Me An Email</h1>
+          <Typography.Title>Send Me An Email</Typography.Title>
           <form ref={form} onSubmit={sendEmail} className="email-form">
-            <label>YOUR EMAIL</label>
-            <Input type="email" name="user-email" bordered={false} />
-            <label>SUBJECT</label>
-            <Input type="text" name="user-subject" bordered={false} />
-            <label>MESSAGE</label>
-            <Input.TextArea name="user-message" bordered={false} />
+            <Typography.Text>YOUR EMAIL</Typography.Text>
+            <Input
+              style={{ borderColor: colorText }}
+              type="email"
+              name="user-email"
+              bordered={false}
+            />
+            <Typography.Text>SUBJECT</Typography.Text>
+            <Input
+              style={{ borderColor: colorText }}
+              type="text"
+              name="user-subject"
+              bordered={false}
+            />
+            <Typography.Text>MESSAGE</Typography.Text>
+            <Input.TextArea
+              style={{ borderColor: colorText }}
+              name="user-message"
+              bordered={false}
+            />
             {contextHolder}
             <Button value="Send" htmlType="submit" type="primary">
               Send Message
             </Button>
-            <p>
+            <Typography.Text>
               Or send it with{" "}
-              <a href="mailto:lenamphu12345@gmail.com">Your Email</a>
-            </p>
+              <Typography.Link href="mailto:lenamphu12345@gmail.com">
+                Your Email
+              </Typography.Link>
+            </Typography.Text>
 
             <div>
-              <p>I'm Also On</p>
+              <Typography.Text>I'm Also On</Typography.Text>
               {social.map((i) => {
                 return (
                   <>

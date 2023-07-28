@@ -1,4 +1,4 @@
-import { Carousel, Image, Tag, Tooltip } from "antd";
+import { Carousel, Image, Tag, Tooltip, Typography } from "antd";
 import "./Project.scss";
 import imiu from "../../assets/images/imiu.png";
 import sbd from "../../assets/images/safe-building.png";
@@ -113,7 +113,7 @@ const Project: React.FC = () => {
 
   return (
     <div className="project-container session" id="project">
-      <h1>Some of my work</h1>
+      <Typography.Title>Some of my work</Typography.Title>
       <div className="carousel-container">
         <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
           {" "}
@@ -139,12 +139,12 @@ const Project: React.FC = () => {
       <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
         <div className="project-name" key={project[slide].name}>
           <Tooltip title="Click here to visit the website!">
-            <h2>
+            <Typography.Title level={2}>
               {" "}
               <a href={project[slide].url}>{project[slide].name}</a>
-            </h2>
+            </Typography.Title>
           </Tooltip>
-          <p>{project[slide].desc}</p>
+          <Typography.Text>{project[slide].desc}</Typography.Text>
           <div>
             {project[slide].tags.map((t) => {
               return (

@@ -1,4 +1,4 @@
-import { Col, Row, Tooltip } from "antd";
+import { Col, Row, Tooltip, Typography } from "antd";
 import "./Skill.scss";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 interface skill {
@@ -62,7 +62,9 @@ const Skill: React.FC = () => {
   return (
     <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
       <div className="skill-container session" id="skill">
-        <h1>Some technologies I have worked with</h1>
+        <Typography.Title>
+          Some technologies I have worked with
+        </Typography.Title>
 
         <div>
           <Row gutter={[24, 48]}>

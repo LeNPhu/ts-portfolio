@@ -52,8 +52,8 @@ const items = [
       <>
         <p className="bold">General Era Digital Solution Joint Stock Company</p>
         <p>
-          Worked as an Itern as along wonderful colleagues and management as
-          part of FPT University's On-The-Job Training Course
+          Worked as an Intern along wonderful colleagues and management as part
+          of FPT University's On-The-Job Training Course
         </p>
         <p></p>
       </>
@@ -68,13 +68,13 @@ const About: React.FC = () => {
         <Col span={12}>
           <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}>
             <div className="intro">
-              <h2>About me</h2>
-              <div className="overview inter">
+              <Typography.Title>About me</Typography.Title>
+              <Typography.Text className="overview inter">
                 I'm a detail-oriented front-end developer passionate about
                 creating beautiful experience with code
-              </div>
+              </Typography.Text>
               <Divider />
-              <p>
+              <Typography.Text>
                 As of 2023, Im a final-year student at FPT University studying
                 <span className="bold"> Software Engineering</span>. I have
                 experience designing and creating websites, from simple landing
@@ -82,20 +82,23 @@ const About: React.FC = () => {
                 creating an intuitive{" "}
                 <span className="bold">User Experience</span> while keeping the
                 website efficient.
-              </p>
+              </Typography.Text>
               <br />
-              <p>
+              <br />
+              <Typography.Text>
                 I love doing intensive research on aspects that I have yet
                 clicked with, and I'm always looking for opportunities to work
                 with experienced developers and learn as much as I can. My goal
                 at the end of the day is to develop the best experience it's
                 user didn't know was there.
-              </p>
+              </Typography.Text>
               <br />
-              <p>
+              <br />
+              <Typography.Text>
                 I'm also highly proficient with English with an IELTS band of
                 8.0
-              </p>
+              </Typography.Text>
+              <br />
               <br />
               <Typography.Link href={cv} style={{ fontSize: "1.6rem" }}>
                 Grab a copy of my CV!
@@ -109,7 +112,7 @@ const About: React.FC = () => {
             animateOnce={true}
           >
             <div className="exp">
-              <h2>My Experience</h2>
+              <Typography.Title>My Experience</Typography.Title>
               <Timeline mode="left" items={items}></Timeline>
             </div>
           </AnimationOnScroll>
